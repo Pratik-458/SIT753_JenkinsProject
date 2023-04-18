@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DIRECTORY_PATH = ""
+        DIRECTORY_PATH = "https://github.com/Pratik-458/SIT753_JenkinsProject.git"
         TESTING_ENVIRONMENT = "Testing Environment"
         PRODUCTION_ENVIRONMENT = "pratikpawar"
     }
