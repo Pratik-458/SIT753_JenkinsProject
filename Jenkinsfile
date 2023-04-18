@@ -10,16 +10,12 @@ pipeline {
         stage("Build") {
             steps {
                 echo "fetch the source code from the directory path specified by the environment variable"
-            }
-            steps {
                 echo "compile the code and generate any necessary artifacts"
             }
         }
         stage("Test") {
             steps {
                 echo "Running unit tests for the application..."
-            }
-            steps {
                 echo "Running integration tests for the application..."
             }
         }
