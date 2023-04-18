@@ -8,39 +8,39 @@ pipeline {
     stages {
 
         stage("Build") {
-            step {
+            steps {
                 echo "fetch the source code from the directory path specified by the environment variable"
             }
-            step {
+            steps {
                 echo "compile the code and generate any necessary artifacts"
             }
         }
         stage("Test") {
-            step {
+            steps {
                 echo "Running unit tests for the application..."
             }
-            step {
+            steps {
                 echo "Running integration tests for the application..."
             }
         }
         stage("Code Quality Check") {
-            step {
+            steps {
                 echo "check the quality of the code for the application..."
             }
         }
         stage("Deploy") {
-            step {
+            steps {
                 echo "deploy the application to a testing environment specified by the environment variable"
             }
         }
         stage("Approval") {
-            step {
+            steps {
                 echo "Approval stage..."
                 sleep(time: 10, unit: 'SECONDS')
             }
         }
         stage("Deploy to Production") {
-            step {
+            steps {
                 echo "Deploying to Production environment ${PRODUCTION_ENVIRONMENT}"
             }
         }
